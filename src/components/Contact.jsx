@@ -20,13 +20,21 @@ const Contact = () => {
         email,
         message,
       });
+
+      // Redirect to open default email client with pre-filled content
+      const subject = `Portfolio Inquiry from ${name}`;
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      window.location.href = `mailto:anjalikadyan607@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${body}`;
+
       setName("");
       setEmail("");
       setMessage("");
-      toast.success("Message Sent");
+      toast.success("Opening your email client to send the message...");
       setDisableBtn(false);
     } catch (error) {
-      toast.error("Error");
+      toast.error("Error saving message");
       console.log(error);
       setDisableBtn(false);
     }

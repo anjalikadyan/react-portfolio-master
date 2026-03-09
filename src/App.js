@@ -1,11 +1,11 @@
 import Header, { HeaderPhone } from "./components/Header";
 import Home from "./components/Home";
-import Work from "./components/Work";
-import Timeline from "./components/Timeline";
+import Projects from "./components/Projects";
 import Services from "./components/Services";
-import Testimonial from "./components/Testimonial";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import About from "./components/About";
+import Certificates from "./components/Certificates";
 import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 
@@ -24,21 +24,19 @@ function App() {
     };
   }, [ratio]);
 
-  return ratio < 2 ? (
+  return (
     <>
       <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Home ratio={ratio} />
-      <Work />
-      <Timeline />
+      <About />
+      <Projects />
       <Services />
-      <Testimonial />
+      <Certificates />
       <Contact />
       <Footer />
       <Toaster />
     </>
-  ) : (
-    <em id="customMessage">Please Change the ratio to View!</em>
   );
 }
 

@@ -3,19 +3,13 @@ import { animate, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/Adobe Express - file.png";
+import data from "../assets/data.json";
 
 const Home = ({ ratio }) => {
-  const clientCount = useRef(null);
   const projectCount = useRef(null);
 
-  const animationClientsCount = () => {
-    animate(0, 100, {
-      duration: 1,
-      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
-    });
-  };
   const animationProjectsCount = () => {
-    animate(0, 500, {
+    animate(0, data.projects.length, {
       duration: 1,
       onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
     });
@@ -53,7 +47,7 @@ const Home = ({ ratio }) => {
 
           <Typewriter
             options={{
-              strings: ["A Developer", "A Designer", "A Student"],
+              strings: ["Full Stack Developer", "UI/UX Designer", "Software Engineer"],
               autoStart: true,
               loop: true,
               cursor: "",
@@ -63,44 +57,31 @@ const Home = ({ ratio }) => {
 
           <div>
             <a href="mailto:anjalikadyan607@gmail.com">Hire Me</a>
-            <a href="#work">
+            <a href="#projects">
               Projects <BsArrowUpRight />
             </a>
           </div>
-
-          <article>
-            <p>
-              +
-              {ratio < 2 && (
-                <motion.span
-                  whileInView={animationClientsCount}
-                  ref={clientCount}
-                ></motion.span>
-              )}
-            </p>
-            <span>Clients Worldwide</span>
-          </article>
 
           <aside>
             <article>
               <p>
                 +
-                {ratio < 2 && (
-                  <motion.span
-                    ref={projectCount}
-                    whileInView={animationProjectsCount}
-                  >
-                    500
-                  </motion.span>
-                )}
+                <motion.span
+                  ref={projectCount}
+                  whileInView={animationProjectsCount}
+                >
+                  {data.projects.length}
+                </motion.span>
               </p>
               <span>Projects Done</span>
             </article>
 
-            <article data-special>
-              <p>Contact</p>
-              <span>anjalikadyan607@gmail.com</span>
-            </article>
+            {ratio < 2 && (
+              <article data-special>
+                <p>Contact</p>
+                <span>anjalikadyan607@gmail.com</span>
+              </article>
+            )}
           </aside>
         </div>
       </section>

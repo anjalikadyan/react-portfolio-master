@@ -1,0 +1,171 @@
+#projects {
+  width: 100%;
+  padding: 8rem $p;
+  background-color: $color1;
+
+  > h2 {
+    font: 900 4rem $text1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 4rem;
+    color: $color5;
+  }
+
+  > section {
+    width: 100%;
+    background-color: $color5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    border-radius: 20px;
+    margin-bottom: 8rem;
+
+    > article {
+      width: 85%;
+    }
+
+    .workItem {
+      background-color: $color4;
+      display: flex;
+      padding: 3rem;
+      border-radius: 15px;
+      gap: 3rem;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+      > img {
+        border-radius: 10px;
+        width: 45%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      > aside {
+        width: 55%;
+        text-align: left;
+
+        > h3 {
+          font: 700 2rem $text1;
+          margin-bottom: 1.5rem;
+          color: $color5;
+        }
+
+        > p {
+          font: 400 1.1rem $text2;
+          line-height: 1.6;
+          margin-bottom: 2rem;
+          color: $color6_1;
+        }
+
+        > a {
+          display: inline-block;
+          background-color: $color3;
+          padding: 1rem 2.5rem;
+          color: $color4;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: $color3_1;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+
+  #experience {
+    width: 100%;
+    margin-top: 5rem;
+
+    > h2 {
+      font: 900 3.5rem $text1;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 5rem;
+      color: $color5;
+    }
+
+    .timelineBox {
+      width: 100%;
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        background-color: $color5;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .timelineItem {
+      padding: 2rem 4rem;
+      position: relative;
+      width: 50%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $color1;
+        border: 4px solid $color3;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      &:nth-child(odd) {
+        text-align: right;
+        left: 0;
+        &::after {
+          right: -12px;
+        }
+      }
+
+      &:nth-child(even) {
+        text-align: left;
+        left: 50%;
+        &::after {
+          left: -12px;
+        }
+      }
+
+      > div {
+        padding: 2rem;
+        background-color: $color5;
+        color: $color1;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+
+        > h2 {
+          font: 700 1.5rem $text1;
+          margin-bottom: 0.5rem;
+          color: $color3_light;
+        }
+
+        > p {
+          font: 400 1rem $text2;
+        }
+      }
+    }
+  }
+}

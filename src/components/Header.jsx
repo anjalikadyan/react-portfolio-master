@@ -25,28 +25,28 @@ export const HeaderPhone = ({ menuOpen, setMenuOpen }) => {
 
 const NavContent = ({ setMenuOpen }) => (
   <>
-    <h2>Abhishek.</h2>
+    <h2>Anjali.</h2>
     <div>
       <a onClick={() => setMenuOpen(false)} href="#home">
         Home
       </a>
-      <a onClick={() => setMenuOpen(false)} href="#work">
-        Work
+      <a onClick={() => setMenuOpen(false)} href="#about">
+        About Me
       </a>
-      <a onClick={() => setMenuOpen(false)} href="#timeline">
-        Experience
+      <a onClick={() => setMenuOpen(false)} href="#projects">
+        Projects
       </a>
       <a onClick={() => setMenuOpen(false)} href="#services">
         Services
       </a>
-      <a onClick={() => setMenuOpen(false)} href="#testimonial">
-        Testimonial
+      <a onClick={() => setMenuOpen(false)} href="#certificates">
+        Certificates
       </a>
       <a onClick={() => setMenuOpen(false)} href="#contact">
         Contact
       </a>
     </div>
-    <a href="mailto:anjalikadyan607@gmail.com">
+    <a onClick={() => setMenuOpen(false)} href="mailto:anjalikadyan607@gmail.com">
       <button>Email</button>
     </a>
   </>

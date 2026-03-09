@@ -17,6 +17,7 @@ const Footer = () => {
 
         <h2>Anjali kadyan</h2>
         <p>Motivation is temporary, but discipline last forever.</p>
+        <p>anjalikadyan607@gmail.com</p>
       </div>
 
       <aside>

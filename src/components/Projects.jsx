@@ -3,10 +3,10 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import data from "../assets/data.json";
 
-const Work = () => {
+const Projects = () => {
   return (
-    <div id="work">
-      <h2>WORK</h2>
+    <div id="projects">
+      <h2>PROJECTS</h2>
       <section>
         <article>
           <Carousel
@@ -37,4 +37,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;
