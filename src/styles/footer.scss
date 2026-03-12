@@ -1,57 +1,66 @@
 footer {
   min-height: 100px;
-  background-color: $color6;
-  color: $color4;
-  padding: 6rem 0;
+  background-color: $color1;
+  color: $color5;
+  padding: 2rem 0;
   padding-left: $p;
   display: grid;
-  grid-template-columns: 10fr 3fr 1fr;
+  grid-template-columns: 3fr 3fr 1fr;
   align-items: center;
   justify-items: center;
   text-align: center;
+  border-top: 1px solid $color6_2;
+
   > div {
     width: 100%;
-    border-left: 2px solid $color4;
-    border-right: 2px solid $color4;
-    > img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: contain;
-    }
-
     > h2 {
-      margin: 1rem;
+      margin: 0.5rem;
+      font: 700 1.5rem $text1;
+      color: $color3;
     }
     > p {
-      font: 400 1.2rem $text2;
+      font: 400 1rem $text2;
+      color: $color6;
     }
   }
 
-  > aside > article {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    svg {
-      font-size: 2rem;
-      color: $color4;
-      &:hover {
-        color: $color3;
+  > aside {
+    > h2 {
+      font: 700 1.2rem $text1;
+      margin-bottom: 0.5rem;
+    }
+    > article {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      align-items: center;
+      svg {
+        font-size: 1.8rem;
+        color: $color5;
+        transition: all 0.3s;
+        &:hover {
+          color: $color3;
+          transform: translateY(-3px);
+        }
       }
     }
   }
 
   > a {
-    width: 50px;
-    height: 50px;
-    background-color: $color4;
+    width: 40px;
+    height: 40px;
+    background-color: $color3;
     border-radius: 50%;
     display: grid;
     place-items: center;
+    transition: all 0.3s;
     svg {
-      font-size: 2rem;
-      color: $color3;
+      font-size: 1.5rem;
+      color: $color1;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      background-color: $color3_1;
     }
   }
 }

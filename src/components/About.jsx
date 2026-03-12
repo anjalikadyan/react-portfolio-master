@@ -7,11 +7,7 @@ const About = () => {
                 <div>
                     <h2>About Me</h2>
                     <p>
-                        I am a passionate developer with experience in building web
-                        applications using React, Node.js, and other modern technologies.
-                        I love to create clean and efficient code to solve real-world
-                        problems. My journey in technology has been driven by curiosity
-                        and a desire to learn and grow constantly.
+                        I’m Anjali Kadyan, a B.Tech CSE (3rd Year) student at Lovely Professional University with a strong interest in Full Stack Web Development and Artificial Intelligence. My primary focus is on the MERN Stack, where I enjoy building responsive and user-friendly web applications using React, Node.js, Express, and MongoDB. Alongside this, I actively strengthen my data structures and algorithms skills, applying logical thinking and problem-solving in Python and JavaScript. I am passionate about learning new technologies, improving my technical depth, and turning ideas into practical solutions. As I continue to grow academically and professionally, I am eager to gain real-world experience and contribute meaningfully to innovative projects.
                     </p>
                 </div>
             </section>

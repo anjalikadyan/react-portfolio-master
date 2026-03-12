@@ -1,17 +1,15 @@
 import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Header = ({ setMenuOpen, menuOpen }) => {
   return (
-    <>
-      <nav>
-        <NavContent setMenuOpen={setMenuOpen} />
-      </nav>
-
+    <nav>
+      <NavContent setMenuOpen={setMenuOpen} />
       <button className="navBtn" onClick={() => setMenuOpen(!menuOpen)}>
         <AiOutlineMenu />
       </button>
-    </>
+    </nav>
   );
 };
 
@@ -25,26 +23,20 @@ export const HeaderPhone = ({ menuOpen, setMenuOpen }) => {
 
 const NavContent = ({ setMenuOpen }) => (
   <>
-    <h2>Anjali.</h2>
+    <h2>Anjali Kadyan</h2>
     <div>
-      <a onClick={() => setMenuOpen(false)} href="#home">
+      <Link onClick={() => setMenuOpen(false)} to="/">
         Home
-      </a>
-      <a onClick={() => setMenuOpen(false)} href="#about">
-        About Me
-      </a>
-      <a onClick={() => setMenuOpen(false)} href="#projects">
+      </Link>
+      <Link onClick={() => setMenuOpen(false)} to="/projects">
         Projects
-      </a>
-      <a onClick={() => setMenuOpen(false)} href="#services">
-        Services
-      </a>
-      <a onClick={() => setMenuOpen(false)} href="#certificates">
+      </Link>
+      <Link onClick={() => setMenuOpen(false)} to="/training">
+        Training
+      </Link>
+      <Link onClick={() => setMenuOpen(false)} to="/certificates">
         Certificates
-      </a>
-      <a onClick={() => setMenuOpen(false)} href="#contact">
-        Contact
-      </a>
+      </Link>
     </div>
     <a onClick={() => setMenuOpen(false)} href="mailto:anjalikadyan607@gmail.com">
       <button>Email</button>

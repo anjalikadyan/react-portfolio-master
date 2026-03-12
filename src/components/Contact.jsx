@@ -101,6 +101,10 @@ const Contact = () => {
           >
             Send
           </motion.button>
+
+          <a href="/src/assets/AnjaliCV-new.pdf" download className="resume-btn">
+            Download Resume
+          </a>
         </motion.form>
       </section>
       <aside>

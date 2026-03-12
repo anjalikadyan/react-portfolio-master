@@ -55,13 +55,6 @@ const Home = ({ ratio }) => {
             }}
           />
 
-          <div>
-            <a href="mailto:anjalikadyan607@gmail.com">Hire Me</a>
-            <a href="#projects">
-              Projects <BsArrowUpRight />
-            </a>
-          </div>
-
           <aside>
             <article>
               <p>
@@ -79,7 +72,7 @@ const Home = ({ ratio }) => {
             {ratio < 2 && (
               <article data-special>
                 <p>Contact</p>
-                <span>anjalikadyan607@gmail.com</span>
+                <a href="mailto:anjalikadyan607@gmail.com">anjalikadyan607@gmail.com</a>
               </article>
             )}
           </aside>
@@ -88,7 +81,6 @@ const Home = ({ ratio }) => {
       <section>
         <img src={me} alt="Anjali" />
       </section>
-      <BsChevronDown />
     </div>
   );
 };

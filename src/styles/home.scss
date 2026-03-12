@@ -2,6 +2,7 @@
   width: 100%;
   height: 90vh;
   display: flex;
+  background-color: $color1;
 
   > section {
     width: 100%;
@@ -10,114 +11,90 @@
       padding-left: $p;
 
       > div {
-        border-top: 1px solid $color6_2;
+        border-top: none; // Removed line
         height: 100%;
-        padding-top: 6rem;
+        padding-top: 8rem;
         > h1 {
           font: 900 4rem $text1;
+          color: $color5;
+          margin-bottom: 1rem;
         }
 
         .typewriterpara {
-          margin: 20px 0;
+          margin: 10px 0;
           height: 20px;
-          letter-spacing: 5px;
-        }
-
-        > div {
-          display: flex;
-          margin: 5rem 0;
-          width: 70%;
-          gap: 4rem;
-          align-items: center;
-          > a {
-            &:first-of-type {
-              background-color: $color3;
-              color: $color1;
-              padding: 1rem 2.5rem;
-              transition: all 0.3s;
-              &:hover {
-                background-color: $color3_1;
-              }
-            }
-            &:last-of-type {
-              font: 600 1.2rem $text2;
-              color: $color5;
-              display: flex;
-              align-items: center;
-            }
-          }
+          letter-spacing: 3px;
+          color: $color3;
+          font-weight: 600;
         }
 
         aside {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           width: 70%;
+          gap: 2rem;
+          margin-top: 2rem;
         }
 
         article {
-          margin: 2rem 0;
+          margin: 1rem 0;
           width: 10rem;
           color: $color5;
           position: relative;
 
-          &::after {
-            content: "";
-            background-color: $color4;
-            width: 100%;
-            height: 5rem;
-            border-radius: 50px;
-            position: absolute;
-            top: 20%;
-            left: 20%;
-            z-index: -1;
-          }
           > p {
-            font: 900 2rem $text1;
+            font: 900 2.5rem $text1;
+            color: $color3;
           }
           > span {
             font: 500 1rem $text2;
+            color: $color6;
           }
         }
 
         article[data-special] {
           width: 16rem;
+          a {
+            color: $color3;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
 
     &:last-of-type {
-      border-top: 1px solid $color6_2;
+      border-top: none; // Removed line
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
-      overflow-x: hidden;
+      overflow: visible;
 
+      // Circle removed as per request
       &::after {
-        content: "";
-        width: 40vmax;
-        height: 40vmax;
-        background-color: $color3;
-        position: absolute;
-        z-index: -1;
-        border-radius: 50%;
+        display: none;
       }
 
       > img {
-        width: 40vmax;
-        object-fit: contain;
-        height: 40vmax;
+        width: 25vmax;
+        height: 25vmax;
+        object-fit: cover;
+        border-radius: 20px; // Square box with rounded corners
+        border: 4px solid $color3;
+        box-shadow: 0 0 30px rgba(100, 255, 218, 0.2);
+        animation: imgFloat 3s ease-in-out infinite alternate;
       }
     }
   }
+}
 
-  > svg {
-    position: absolute;
-    font-size: 4rem;
-    color: $color5;
-    left: 50%;
-    bottom: 5%;
-    transform: translateX(-50%);
-    animation: animateSvg 0.7s infinite linear alternate;
+@keyframes imgFloat {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(-20px) rotate(2deg);
   }
 }
